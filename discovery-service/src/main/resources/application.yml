@@ -1,20 +1,45 @@
 server:
   port: 8761
+
 spring:
   application:
-    name: discovery-service
-  config:
-    activate:
-      on-profile: local, dev, prod
+    name: discovery
+
 eureka:
   client:
     register-with-eureka: false
     fetch-registry: false
-  server:
-    enableSelfPreservation: true
-    renewalPercentThreshold: 90
+
+---
+
+spring:
+  config:
+    activate:
+      on-profile: eureka2
+
+server:
+  port: 8762
+
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://nowgnas.local:8763/eureka/
   instance:
-    prefer-ip-address: true
-logging:
-  level:
-    root: ERROR
+    hostname: localhost
+
+---
+
+spring:
+  config:
+    activate:
+      on-profile: eureka3
+
+server:
+  port: 8763
+
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:8762/eureka/
+  instance:
+    hostname: nowgnas.local

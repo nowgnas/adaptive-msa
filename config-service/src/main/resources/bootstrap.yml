@@ -1,0 +1,5 @@
+encrypt:
+  key-store:
+    location: classpath:adaptive-msa.jks
+    password: 123456
+    alias: adaptive-msa
