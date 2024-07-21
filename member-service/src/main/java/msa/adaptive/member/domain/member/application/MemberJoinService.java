@@ -15,6 +15,7 @@ public class MemberJoinService {
     public void memberJoinByClassification(MemberInfo memberInfo,
             MemberClassification memberClassification) {
         Member member = joinByRule.applyJoinRule(memberInfo, memberClassification);
+        Member member1 = Member.convertMemberInformation("");
     }
 
 }
