@@ -15,10 +15,9 @@ import msa.adaptive.member.domain.model.value.MemberStatus;
 @NoArgsConstructor(access = AccessLevel.PROTECTED)
 @AllArgsConstructor
 @Getter
-public class Member {
+public class Member extends Audit {
   private MemberId memberId;
   private MemberInfo memberInfo;
-  private Audit audit;
   private MemberStatus memberStatus;
   private MemberClassification memberClassification;
 }
