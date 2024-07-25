@@ -1,8 +1,8 @@
 package msa.adaptive.member.application.port.in;
 
-import msa.adaptive.member.domain.model.CreateMemberCommand;
-import msa.adaptive.member.domain.model.value.MemberId;
+import msa.adaptive.member.adapter.in.web.response.MemberLoginResponse;
+import msa.adaptive.member.adapter.in.web.request.CreateMemberCommand;
 
 public interface CreateMemberUseCase {
-     MemberId createMember(CreateMemberCommand command);
+     MemberLoginResponse createMember(CreateMemberCommand command);
 }

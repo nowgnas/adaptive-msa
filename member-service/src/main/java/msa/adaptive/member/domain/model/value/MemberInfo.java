@@ -11,5 +11,6 @@ import lombok.NoArgsConstructor;
 @AllArgsConstructor
 @Getter
 public class MemberInfo {
-
+  private String name;
+  private String age;
 }

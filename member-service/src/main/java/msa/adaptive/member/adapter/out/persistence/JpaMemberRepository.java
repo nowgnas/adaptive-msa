@@ -4,7 +4,9 @@ import java.util.Optional;
 import msa.adaptive.member.application.port.out.MemberRepository;
 import msa.adaptive.member.domain.model.entity.Member;
 import msa.adaptive.member.domain.model.value.MemberId;
+import org.springframework.stereotype.Repository;
 
+@Repository
 public class JpaMemberRepository implements MemberRepository {
 
     @Override
